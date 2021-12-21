@@ -28,11 +28,13 @@
         <![endif]-->
         <div class="hero-container">
             <div class="hero-container-text">
-                <h1 class="name">Preston Blake <br> Full stack developer</h1>
-                <p class="animation-text">I 
+                <h1 style="font-size: 48px;" class="name">PRESTON BLAKE</h1>
+                
+                <h1> FULL STACK DEVELOPER</h1>
+                <h1 class="animation-text">I 
 <svg fill="red" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18 1l-6 4-6-4-6 5v7l12 10 12-10v-7z"/></svg>
                     
-                    To Code</p>
+                    To Code</h1>
                 <p class="hero-paragraph-text">
                     Currently pursuing a masters
                     degree in Computer Science with a 
@@ -41,36 +43,50 @@
                     Summer 2022.
                 </p>
                 <p>Regards,</p>
-                <img src="{% static 'images/sig3.png' %}" />
+                <img class="sig" src="{% static 'images/sig3.png' %}" />
             </div>
             <div class="hero-container-image">
-                <img src="{% static 'images/HeroImage.svg' %}" />
+                <img class="hero-image" src="{% static 'images/HeroImage.svg' %}" />
             </div>
         </div>
-        <div class="quote-container">
-            <div class="quote-container-inner">
-                <div class="corner-left"></div>
-                <div class="corner-right"></div>
-                <h1>ITS NOT ABOUT HOW MANY TIMES YOU FAIL. 
+        <div id="slider">
+            <ul id="slideWrap"> 
+              <li>
+                <h1 class="quote-text">ITS NOT ABOUT HOW MANY TIMES YOU FALL. 
                     ITS ABOUT HOW MANY TIMES YOU GET BACK UP.</h1>
-            </div>
-        </div>
+              </li>
+              <li>
+                <h1 class="quote-text">THERE IS A DIFFERENCE BETWEEN DOERS AND 
+                    DREAMERS AND THAT DIFFERENCE IS GETTING STUFF DONE.</h1>
+              </li>
+              
+            </ul>
+            <div class="corner-left"></div>
+            <div class="corner-right"></div>
+            {% comment %} <a id="prev" href="#">&#8810;</a> {% endcomment %}
+            {% comment %} <a id="next" href="#">&#8811;</a> {% endcomment %}
+          </div>
+        
         <div class="education-container">
             <div class="education-image-section">
                <img class="image-seal" src="{% static 'images/CSUseal.png' %}"/>
             </div>
         </div>
-        <h1>DEGREES</h1>
+        
         <div class="degrees-container">
             
             <div class="degree-row">
                 <div class="degree-image-container">
-                    <img src="{% static 'images/degreeFinance.png' %}"/>
+                    <div class="coming-soon-container">
+                    <div class="coming-soon-banner">
+                        <h1 class="coming-soon">COMING SOON...</h1>
+                    </div>     
+                    </div>
                 </div>
                 <div class="degree-sentence">
                     <h1>MS COMPUTER SCIENCE </h1>
                     <h1>JAN 2021 - MAY 2023 </h1>
-                    <H1>FOCUS ON AI & DESIGN</H1>
+                    <h1>FOCUS ON AI & DESIGN</h1>
                 </div>
             </div>
             <div class="degree-row">
@@ -78,62 +94,316 @@
                     <img src="{% static 'images/degreeFinance.png' %}"/>
                 </div>
                 <div class="degree-sentence">
-                    <h1>MS COMPUTER SCIENCE </h1>
-                    <h1>JAN 2021 - MAY 2023 </h1>
-                    <H1>FOCUS ON AI & DESIGN</H1>
+                    <h1>BS FINANCE </h1>
+                    <h1>AUG 2017 - MAY 2021 </h1>
+                    <h1>FOCUS ON INVESTING & BUSINESS</h1>
                 </div>
             </div>
         </div>
-        <div class="project-container">
-            <h1>PROJECTS</h1>
+        <div class="projects-container">
+            <h1 style="margin-left: 20px">PROJECTS</h1>
+            
+            <div class="projects-container">
+            
             <div class="project-container">
                 <div class="project-container-header">
-                    <h1>M-B HOMES</h1>
-                </div>
-                    <div style="background-image: url({% static 'images/MBHomes.png' %});"  class="project-image">
-                        <img class="website-image" src="{% static 'images/MBHomes.png' %}">
-                    </div>
-            </div>
-            <div class="project-container">
-                <div class="project-container-header">
-                    <h1>FIFTH ST HAIR</h1>
-                </div>
-                    <div style="background-image: url({% static 'images/FifthStreetHair.png' %});"  class="project-image">
-                        <img class="website-image" src="{% static 'images/FifthStreetHair.png' %}">
-                    </div>
-            </div>
-            <div class="project-container">
-                <div class="project-container-header">
+                    <div>
                     <h1>CATALYST</h1>
-                </div>
-                    <div style="background-image: url({% static 'images/catalyst.png' %});"  class="project-image">
-                        <img class="website-image" src="{% static 'images/catalyst.png' %}">
                     </div>
+                    <div>
+                        <div class="view-site-btn">Visit Site</div>
+                    </div>
+                </div>
+                <div class="project-container-inner">
+                    <div   class="project-image">
+                        <img class="website-image" src="{% static 'images/catalyst.png' %}"/>
+                    </div>
+                    <div class="project-info-container">
+                        <div class="project-info-container-wrapper">
+                            <div>
+                            <h1 style="font-size: 24px; ">OVERVIEW</h1>
+                            <p>Catalyst a location based chat app platform. Allows 
+                                users in real time to communicate with there
+                                location. Code base consists of lead gen 
+                                website, beta web app and cross platform
+                                app currently under development.</p>
+                            </div>
+                                <br>
+                            <div>
+                            <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
+                            <p>
+                             <span class="bullet-point">-</span> Recieved over 25 sign ups on the lead gen website.</p>
+                            <p>- Showcased beta web application to friends and 
+                                family seccuring funding for server and 
+                                development costs.</p>
+                            </div>
+                                <br>
+                            <div>
+                                <h1 style="font-size: 24px; ">TECH USED</h1>
+                            <div class="tech-used-container">
+                                <div class="tech-used-icon">REACT</div>
+                                <div class="tech-used-icon">REACT-NATIVE</div>
+                                <div class="tech-used-icon">DJANGO</div>
+                                <div class="tech-used-icon">DJANGO-RESTFRAMEWORK</div>
+                                <div class="tech-used-icon">MAPBOX</div>
+                                <div class="tech-used-icon">SCSS</div>
+                                <div class="tech-used-icon">WEB SOCKETS</div>
+                            </div>
+                        </div>
+                        </div> 
+                    </div>
+                </div>
             </div>
             <div class="project-container">
                 <div class="project-container-header">
-                    <h1>TASKIER</h1>
-                </div>
-                    <div style="background-image: url({% static 'images/TaskierApp.png' %});"  class="project-image">
-                        <img class="website-image" src="{% static 'images/TaskierApp.png' %}">
+                    <div>
+                    <h1>Taskier App</h1>
                     </div>
+                    <div>
+                        <div class="view-site-btn">Download</div>
+                    </div>
+                </div>
+                <div class="project-container-inner">
+                    <div   class="project-image">
+                        <img class="website-image" src="{% static 'images/TaskierApp.png' %}"/>
+                    </div>
+                    <div class="project-info-container">
+                        <div class="project-info-container-wrapper">
+                            <div>
+                            <h1 style="font-size: 24px; ">OVERVIEW</h1>
+                            <p>Catalyst a location based chat app platform. Allows 
+                                users in real time to communicate with there
+                                location. Code base consists of lead gen 
+                                website, beta web app and cross platform
+                                app currently under development.</p>
+                            </div>
+                                <br>
+                            <div>
+                            <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
+                            <p>
+                             <span class="bullet-point">-</span> Recieved over 25 sign ups on the lead gen website.</p>
+                            <p>- Showcased beta web application to friends and 
+                                family seccuring funding for server and 
+                                development costs.</p>
+                            </div>
+                                <br>
+                            <div>
+                                <h1 style="font-size: 24px; ">TECH USED</h1>
+                            <div class="tech-used-container">
+                                <div class="tech-used-icon">REACT</div>
+                                <div class="tech-used-icon">REACT-NATIVE</div>
+                                <div class="tech-used-icon">DJANGO</div>
+                                <div class="tech-used-icon">DJANGO-RESTFRAMEWORK</div>
+                                <div class="tech-used-icon">MAPBOX</div>
+                                <div class="tech-used-icon">SCSS</div>
+                                <div class="tech-used-icon">WEB SOCKETS</div>
+                            </div>
+                        </div>
+                        </div> 
+                    </div>
+                </div>
             </div>
             <div class="project-container">
                 <div class="project-container-header">
-                    <h1>VISIONHOW</h1>
-                </div>
-                    <div style="background-image: url({% static 'images/Visionhow.png' %});"  class="project-image">
-                        <img class="website-image" src="{% static 'images/Visionhow.png' %}">
+                    <div>
+                    <h1>FIFTH ST HAIR</h1>
                     </div>
+                    <div>
+                        <div class="view-site-btn">Visit Site</div>
+                    </div>
+                </div>
+                <div class="project-container-inner">
+                    <div   class="project-image">
+                        <img class="website-image" src="{% static 'images/FifthStreethair.png' %}"/>
+                    </div>
+                    <div class="project-info-container">
+                        <div class="project-info-container-wrapper">
+                            <div>
+                            <h1 style="font-size: 24px; ">OVERVIEW</h1>
+                            <p>Catalyst a location based chat app platform. Allows 
+                                users in real time to communicate with there
+                                location. Code base consists of lead gen 
+                                website, beta web app and cross platform
+                                app currently under development.</p>
+                            </div>
+                                <br>
+                            <div>
+                            <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
+                            <p>
+                             <span class="bullet-point">-</span> Recieved over 25 sign ups on the lead gen website.</p>
+                            <p>- Showcased beta web application to friends and 
+                                family seccuring funding for server and 
+                                development costs.</p>
+                            </div>
+                                <br>
+                            <div>
+                                <h1 style="font-size: 24px; ">TECH USED</h1>
+                            <div class="tech-used-container">
+                                <div class="tech-used-icon">REACT</div>
+                                <div class="tech-used-icon">REACT-NATIVE</div>
+                                <div class="tech-used-icon">DJANGO</div>
+                                <div class="tech-used-icon">DJANGO-RESTFRAMEWORK</div>
+                                <div class="tech-used-icon">MAPBOX</div>
+                                <div class="tech-used-icon">SCSS</div>
+                                <div class="tech-used-icon">WEB SOCKETS</div>
+                            </div>
+                        </div>
+                        </div> 
+                    </div>
+                </div>
             </div>
             <div class="project-container">
                 <div class="project-container-header">
-                    <h1>UI DESIGNS</h1>
-                </div>
-                    <div style="background-image: url({% static 'images/visionhowUI.png' %});"  class="project-image">
-                        <img class="website-image" src="{% static 'images/visionhowUI.png' %}">
+                    <div>
+                    <h1>VisionHow App & Web Development</h1>
                     </div>
+                    <div>
+                        <div class="view-site-btn">Visit Site</div>
+                    </div>
+                </div>
+                <div class="project-container-inner">
+                    <div   class="project-image">
+                        <img class="website-image" src="{% static 'images/Visionhow.png' %}"/>
+                    </div>
+                    <div class="project-info-container">
+                        <div class="project-info-container-wrapper">
+                            <div>
+                            <h1 style="font-size: 24px; ">OVERVIEW</h1>
+                            <p>Catalyst a location based chat app platform. Allows 
+                                users in real time to communicate with there
+                                location. Code base consists of lead gen 
+                                website, beta web app and cross platform
+                                app currently under development.</p>
+                            </div>
+                                <br>
+                            <div>
+                            <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
+                            <p>
+                             <span class="bullet-point">-</span> Recieved over 25 sign ups on the lead gen website.</p>
+                            <p>- Showcased beta web application to friends and 
+                                family seccuring funding for server and 
+                                development costs.</p>
+                            </div>
+                                <br>
+                            <div>
+                                <h1 style="font-size: 24px; ">TECH USED</h1>
+                            <div class="tech-used-container">
+                                <div class="tech-used-icon">REACT</div>
+                                <div class="tech-used-icon">REACT-NATIVE</div>
+                                <div class="tech-used-icon">DJANGO</div>
+                                <div class="tech-used-icon">DJANGO-RESTFRAMEWORK</div>
+                                <div class="tech-used-icon">MAPBOX</div>
+                                <div class="tech-used-icon">SCSS</div>
+                                <div class="tech-used-icon">WEB SOCKETS</div>
+                            </div>
+                        </div>
+                        </div> 
+                    </div>
+                </div>
             </div>
+            <div class="project-container">
+                <div class="project-container-header">
+                    <div>
+                    <h1>M-B HOMES REALTY</h1>
+                    </div>
+                    <div>
+                        <div class="view-site-btn">Visit Site</div>
+                    </div>
+                </div>
+                <div class="project-container-inner">
+                    <div   class="project-image">
+                        <img class="website-image" src="{% static 'images/MBHomes.png' %}"/>
+                    </div>
+                    <div class="project-info-container">
+                        <div class="project-info-container-wrapper">
+                            <div>
+                            <h1 style="font-size: 24px; ">OVERVIEW</h1>
+                            <p>Catalyst a location based chat app platform. Allows 
+                                users in real time to communicate with there
+                                location. Code base consists of lead gen 
+                                website, beta web app and cross platform
+                                app currently under development.</p>
+                            </div>
+                                <br>
+                            <div>
+                            <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
+                            <p>
+                             <span class="bullet-point">-</span> Recieved over 25 sign ups on the lead gen website.</p>
+                            <p>- Showcased beta web application to friends and 
+                                family seccuring funding for server and 
+                                development costs.</p>
+                            </div>
+                                <br>
+                            <div>
+                                <h1 style="font-size: 24px; ">TECH USED</h1>
+                            <div class="tech-used-container">
+                                <div class="tech-used-icon">REACT</div>
+                                <div class="tech-used-icon">REACT-NATIVE</div>
+                                <div class="tech-used-icon">DJANGO</div>
+                                <div class="tech-used-icon">DJANGO-RESTFRAMEWORK</div>
+                                <div class="tech-used-icon">MAPBOX</div>
+                                <div class="tech-used-icon">SCSS</div>
+                                <div class="tech-used-icon">WEB SOCKETS</div>
+                            </div>
+                        </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-container-header">
+                    <div>
+                    <h1>UI DESIGN</h1>
+                    </div>
+                    <div>
+                        <div class="view-site-btn">See Designs</div>
+                    </div>
+                </div>
+                <div class="project-container-inner">
+                    <div   class="project-image">
+                        <img class="website-image" src="{% static 'images/visionhowUI.png' %}"/>
+                    </div>
+                    <div class="project-info-container">
+                        <div class="project-info-container-wrapper">
+                            <div>
+                            <h1 style="font-size: 24px; ">OVERVIEW</h1>
+                            <p>Catalyst a location based chat app platform. Allows 
+                                users in real time to communicate with there
+                                location. Code base consists of lead gen 
+                                website, beta web app and cross platform
+                                app currently under development.</p>
+                            </div>
+                                <br>
+                            <div>
+                            <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
+                            <p>
+                             <span class="bullet-point">-</span> Recieved over 25 sign ups on the lead gen website.</p>
+                            <p>- Showcased beta web application to friends and 
+                                family seccuring funding for server and 
+                                development costs.</p>
+                            </div>
+                                <br>
+                            <div>
+                                <h1 style="font-size: 24px; ">TECH USED</h1>
+                            <div class="tech-used-container">
+                                <div class="tech-used-icon">REACT</div>
+                                <div class="tech-used-icon">REACT-NATIVE</div>
+                                <div class="tech-used-icon">DJANGO</div>
+                                <div class="tech-used-icon">DJANGO-RESTFRAMEWORK</div>
+                                <div class="tech-used-icon">MAPBOX</div>
+                                <div class="tech-used-icon">SCSS</div>
+                                <div class="tech-used-icon">WEB SOCKETS</div>
+                            </div>
+                        </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            
+           
+            
+        </div>
         </div>
         <div class="social-container">
             <div class="social-container-icon">
@@ -147,19 +417,28 @@
             </div> 
 
         </div>
+        <div class="resume-container"> 
+            <img class="resume-svg" src="{% static 'images/resume.svg' %}" />
+            <button class="download-resume-btn">
+                DOWNLOAD
+            </button>
+        </div>
        <div class="contact-container">
            
         <form class="contact-form" method="POST">
-            <p class="contact-header-text">Contact</p>
+            <h1 class="contact-header-text">CONTACT</h1>
             <label>Name</label>
             <input class="form-input-name" placeholder="name" />
             <label>Email</label>
             <input class="form-input-email" placeholder="email" />
             <label>Message</label>
-            <textarea class="form-text-area" placeholder="message" ></textarea>
+            <textarea  class="form-text-area" placeholder="message" ></textarea>
             <button class="form-button">Send</button>
         </form>
-       </div>
+       </div> 
+       <footer>
+           copyright Preston Blake 2021
+       </footer>
        <button onclick="topFunction()" id="myBtn" title="Go to top">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 22h-24l12-20z"/></svg>
         
@@ -169,7 +448,7 @@
 var mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+{% comment %} window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
@@ -177,14 +456,72 @@ function scrollFunction() {
   } else {
     mybutton.style.display = "none";
   }
-}
+} {% endcomment %}
 
 // When the user clicks on the button, scroll to the top of the document
-function topFunction() {
+{% comment %} function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
   console.log('scrollTop');
-}
+} {% endcomment %}
+
+{% comment %} code for the quote slider   {% endcomment %}
+var responsiveSlider = function() {
+    var slider = document.getElementById("slider");
+    var sliderWidth = slider.offsetWidth;
+    var slideList = document.getElementById("slideWrap");
+    var count = 1;
+    var items = slideList.querySelectorAll("li").length;
+   // var prev = document.getElementById("prev");
+   // var next = document.getElementById("next");
+    
+    window.addEventListener('resize', function() {
+      sliderWidth = slider.offsetWidth;
+    });
+    
+    var prevSlide = function() {
+      if(count > 1) {
+        count = count - 2;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = 1) {
+        count = items - 1;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+    };
+    
+    var nextSlide = function() {
+      if(count < items) {
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = items) {
+        slideList.style.left = "0px";
+        count = 1;
+      }
+    };
+    
+   // next.addEventListener("click", function() {
+   //   nextSlide();
+   // });
+    
+    //prev.addEventListener("click", function() {
+    //  prevSlide();
+    //});
+    
+    setInterval(function() {
+      nextSlide()
+    }, 4000);
+    
+    };
+    
+    window.onload = function() {
+    responsiveSlider();  
+    }
+    
+    
         </script>
     </body>
 </html>

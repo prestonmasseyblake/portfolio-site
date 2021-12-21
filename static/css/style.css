@@ -49,12 +49,23 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
 }
 .logo {
     
 }
-
+.resume-button {  
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+}
+.contact-button { 
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 8px 16px;
+}
 .sig { 
     max-width: 100%;
 }

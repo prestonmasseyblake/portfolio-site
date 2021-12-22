@@ -35,6 +35,10 @@
     box-sizing: border-box;
 
 }
+a {
+    text-decoration: none !important;
+    color: inherit;
+  }
 h1 {
     font-size: 36px;
     font-family: 'nunito_sansextrabold_italic';

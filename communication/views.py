@@ -26,4 +26,4 @@ def home_view(request):
             except BadHeaderError:
                 return HttpResponse('Invalid Header Found.') 
     context = {}
-    return render(request, "message.html",context)
+    return render(request, "blockchain.html",context)

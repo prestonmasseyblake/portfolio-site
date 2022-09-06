@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Preston | Developer</title>
+         <script src="https://cdn.tailwindcss.com"></script>
         <meta name="description" content="">
         <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +16,11 @@
     </head>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <body>
+        <div class="main-container w-full flex justify-center">
+        <div class="max-w-7xl">
         {% include "./components/navbar.html" %}
         
-        <div class="hero-container">
+        <div class="hero-container flex ">
             <div class="hero-container-text">
                 <h1 style="font-size: 48px;" class="name">PRESTON BLAKE</h1>
                 
@@ -33,11 +36,11 @@
                 <p>Regards,</p>
                 <img class="sig" src="{% static 'images/sigLogoo.png' %}" />
             </div>
-            <div class="hero-container-image">
+            {% comment %} <div class="hero-container-image">
                 <img class="hero-image" src="{% static 'images/HeroImage.svg' %}" />
-            </div>
+            </div> {% endcomment %}
         </div>
-        <div id="slider">
+        {% comment %} <div id="slider">
             <ul id="slideWrap"> 
               <li>
                 <h1 class="quote-text">ITS NOT ABOUT HOW MANY TIMES YOU FALL. 
@@ -51,14 +54,18 @@
             <div class="corner-left"></div>
             <div class="corner-right"></div>
        
-          </div>
+          </div> {% endcomment %}
         
-        <div class="education-container">
+       
+        
+         {% include "./components/projects.html" %}
+
+          <div class="education-container">
             <div class="education-image-section">
                <img class="image-seal" src="{% static 'images/CSUseal.png' %}"/>
             </div>
         </div>
-        
+
         <div class="degrees-container">
             
             <div class="degree-row">
@@ -90,7 +97,7 @@
             </div>
         </div>
 
-        {% include "./components/projects.html" %}
+       
         
         <div id="two" class="resume-container"> 
             <img class="resume-svg" src="{% static 'images/FullStackWeb3.png' %}" />
@@ -257,5 +264,7 @@ $('a[href*="#"]')
     
     
         </script>
+    </div>
+    </div>
     </body>
 </html>

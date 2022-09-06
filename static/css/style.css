@@ -61,7 +61,7 @@ body {
 .logo {
     /* margin-left: 20px; */
     /* transform: scale(2); */
-    height: 40px;
+    height: 60px;
 }
 .resume-button {  
     padding: 8px 16px;
@@ -99,7 +99,7 @@ body {
     
 }
 .hero-image {
-    max-width: 100%;
+    /* max-width: 50%; */
 }
 
 .animation-text {
@@ -116,7 +116,6 @@ body {
 
 .hero-container-text {
   padding-top: 10%;
-    
     display: flex;
     flex-direction:column;
     align-items: flex-start;
@@ -247,7 +246,7 @@ body {
     
 }
 .project-image {
-    width: 50%;
+    /* width: 50%; */
     height: auto;
     /* min-height: 250px; */
   
@@ -491,7 +490,7 @@ body {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* @media only screen and (min-width: 600px) {...} */
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 2800px) {
     .degree-image-container {
         margin: 20px 0px;
     }

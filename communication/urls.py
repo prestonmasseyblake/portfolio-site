@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     # ex: /polls/
-    path('er', views.home_view, name='home'),
-    path('', views.fullstack_view, name='fullstack')
+    path('', views.home_view, name='home'),
+    path('F', views.fullstack_view, name='fullstack')
 
 ]

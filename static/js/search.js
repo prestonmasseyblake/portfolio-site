@@ -6,20 +6,93 @@ const projects = [
     title: "M-B HOMES REALTY",
     link: "https://www.m-bhomes.com",
     image: "MBHOMESLAYOUT.png",
+    overview:
+      "Real Estate website for an agent that is currently in use. Consists of multiple pages and live mls feed on homes currently for sale.",
+    accomplishments:
+      "Leads have come through the site in combination with social media advertising that have resulting in tens of thousands of dollars in commision. Client stated statisfaction in the site and improved brand equity.",
+    tags: ["REACT", "NEXTJS", "SELENIUM", "DJANGO-RESTFRAMEWORK", "SCSS"],
   },
   {
     id: "2",
     title: "Chain Marriage",
     link: "https://www.chainmarriage.com",
     image: "chainMarriageHome.png",
-    tags: ["REACT", "SOLIDITY", "POLYGON", "DJANGO-RESTFRAMEWORK", "WEB3"],
-
+    overview:
+      "The future of marriage is here. Platform that allows you to solidity your love for someone on the blockchain. Marriage in the future will be conducted on the blockchain due to the transparency and ability to create an easily accessible public leger. ",
+    accomplishments:
+      "I was the first person to use the platform becoming either the youngest or first person to get married on the polygon blockchain.",
+    tags: ["REACT", "SOLIDITY", "POLYGON", "DJANGO-RESTFRAMEWORK"],
+  },
+  {
+    id: "3",
+    title: "Krypt | Exchange",
+    link: "https://crpytoexchange.herokuapp.com",
+    image: "KryptHome.png",
+    overview:
+      "Krypto a crypto currency exchange platform build for use with the ethereum network.",
+    accomplishments:
+      "Has been successfuly tested using chai and is hosted on the ropsten test blockchain.",
+    tags: ["REACT", "Ethereum", "METAMASK", "Tailwind CSS", "WEB3"],
+  },
+  {
+    id: "4",
+    title: "What The Doge NFT",
+    link: "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/115280045661947983841653635798987528830528599257518677970676727668494697496577",
+    image: "NFTGif.gif",
+    overview:
+      "One of One NFT project to develop an NFT for the polygon blockchain. It was listed for sale on Opensea for .1 Eth.",
+    accomplishments:
+      "Sucessfuly posted an NFT that was made from scratch in a marketplace. It has not sold yet.",
+    tags: ["Adobe After Effects", "Blender", "OpenSea", "Polygon"],
+  },
+  {
+    id: "5",
+    title: "UI DESIGN",
+    link: "https://www.instagram.com/visionhow/",
+    image: "visionhowUI.png",
+    overview: "Visit Visionhow on Instagram to see UI Desgins.",
+    accomplishments:
+      "Have created several UI Designs and have started to gain a following. My rolex UI Design was reposted by a more popular UI/UX Instagram page.",
+    tags: ["FIGMA", "Photoshop", "IlluSTRATOR"],
+  },
+  {
+    id: "6",
+    title: "Taskier App",
+    link: "https://apps.apple.com/us/app/taskier/id1592401860",
+    image: "TaskierApp.png",
+    overview:
+      "Simple ToDo Application that is currently on the app store. It was completed to showcase that I can create apps and push them into production as well as maintain them completing the full app development lifecycle.",
+    accomplishments:
+      "Have a published app on the Apple App Store. Showcased the app to friends and family recieving 10 downloads and 2 five star reviews to date currently.",
+    tags: ["REACT-NATIVE", "EXPO", "FIGMA", "PHOTOSHOP"],
+  },
+  {
+    id: "7",
+    title: "FIFTH ST HAIR",
+    link: "https://5thstreethair.com",
+    image: "FifthStreetHair.png",
+    overview:
+      "A custom website for a new hair saloon incorperating booking. The site was launched during Covid and helped make the business successful due to the booking feature allowing the hair saloon to still take customers.",
+    accomplishments:
+      "Website was launched with business genereating booking starting on first week. Hundreds of haircuts have been booked through the site resulting in thousands of dollars of revenue and improving efficency and customer satisfaction.",
+    tags: ["WORDPRESS", "CSS", "ELEMENTOR", "PHOTOSHOP"],
+  },
+  {
+    id: "8",
+    title: "VisionHow App & Web Development",
+    link: "https://www.visionhow.com",
+    image: "Visionhow.png",
+    overview:
+      "A small web design firm I manage and run. Visionhow has created production project for several businesses. For my UI Design work look up Visionhow on Instagram.",
+    accomplishments:
+      "Created a handfull of production websites for businesses with all positive customer reviews. Helped businesses generate hundred of leads and thousands of dollars in conversions.",
+    tags: ["NEXTJS", "SCSS", "DJANGO-RESTFRAMEWORK", "FIGMA"],
   },
 ];
-function initializeProjects() {
+function initializeProjects(projs) {
   let projectsContainer = document.getElementById("projects-container");
   console.log("gregeg", projectsContainer);
-    projects.forEach((project) => {
+    projs.forEach((project) => {
       console.log(project)
         let projectCard = document.createElement("div");
         projectCard.setAttribute("onclick", "toggleModel()");
@@ -59,23 +132,31 @@ function initializeProjects() {
       // create the tags for the card 
       let projectCardTechUsedContainer = document.createElement("div");
       projectCardTechUsedContainer.className = "tech-used-container";
-      let projectCardTechUsedIcon = document.createElement("div");
-      projectCardTechUsedIcon.className = "tech-used-icon";
-      projectCardTechUsedIcon.innerHTML = "NextJs";
-      projectCardTechUsedContainer.appendChild(projectCardTechUsedIcon);
+      for (let i = 0; i < project.tags.length; i++) {
+        let projectCardTechUsedIcon = document.createElement("div");
+        projectCardTechUsedIcon.className = "tech-used-icon";
+        projectCardTechUsedIcon.innerHTML = project.tags[i];
+        projectCardTechUsedContainer.appendChild(projectCardTechUsedIcon);
+      }
       projectCard.appendChild(projectCardTechUsedContainer);
       projectsContainer.append(projectCard);
   });
 }
 
-initializeProjects();
+initializeProjects(projects);
+
 let searchInput = document.getElementById("search-input");
 searchInput.addEventListener("keyup", (e) => {
   console.log(e.target.value);
 });
 
 // search function for projects 
-function search() {
+function search(projs, value) {
+  for (let i = 0; i < projs.length; i++) {
+    if (projs[i].title === value) {
+      
+    }
+  }
 
 }
 
@@ -90,386 +171,5 @@ function search() {
 //   }
 
 // }
-
-  // <div class="project-container">
-  //                   <div class="project-container-header">
-  //                       <div>
-  //                       <h1 class="text-3xl">Chain Marriage</h1>
-  //                       </div>
-  //                       <div>
-  //                           <a href="https://www.chainmarriage.com" target="_blank" class="view-site-btn">Visit Site</a>
-  //                       </div>
-  //                   </div>
-  //                   <div class="project-container-inner">
-  //                       <div   class="project-image">
-  //                           <img class="website-image" src="{% static 'images/chainMarriageHome.png' %}"/>
-  //                       </div>
-  //                       <div class="project-info-container">
-  //                           <div class="project-info-container-wrapper">
-  //                               <div>
-  //                               <h1 style="font-size: 24px; ">OVERVIEW</h1>
-  //                               <p>The future of marriage is here. 
-  //                                   Platform that allows you to solidity your love for someone on the blockchain. 
-  //                                   Marriage in the future will be conducted on the blockchain due to the transparency and ability to create an easily accessible public leger. 
-  //                               </p>
-  //                               </div>
-  //                                   <br>
-  //                               <div>
-  //                               <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
-  //                               <p>
-  //                                <span class="bullet-point">-</span> I was the first person to use the platform becoming either the  
-  //                                youngest or first person to get married on the polygon blockchain.</p>
-  //                               </div>
-  //                                   <br>
-  //                               <div>
-  //                                   <h1 style="font-size: 24px; ">TECH USED</h1>
-  //                               <div class="tech-used-container">
-  //                                   <div class="tech-used-icon">SOLIDITY</div>
-  //                                   <div class="tech-used-icon">REACT</div>
-  //                                   <div class="tech-used-icon">POLYGON</div>
-  //                                   <div class="tech-used-icon">DJANGO-RESTFRAMEWORK</div>
-  //                                   <div class="tech-used-icon">WEB3</div>
-  //                               </div>
-  //                           </div>
-  //                           </div> 
-  //                       </div>
-  //                   </div>
-  //               </div>
-            
-  //           <div class="project-container">
-  //               <div class="project-container-header">
-  //                   <div>
-  //                   <h1 class="text-3xl">Krypt | Exchange</h1>
-  //                   </div>
-  //                   <div>
-  //                       <a href="https://crpytoexchange.herokuapp.com" target="_blank" class="view-site-btn">Visit Site</a>
-  //                   </div>
-  //               </div>
-  //               <div class="project-container-inner">
-  //                   <div   class="project-image">
-  //                       <img class="website-image" src="{% static 'images/KryptHome.png' %}"/>
-  //                   </div>
-  //                   <div class="project-info-container">
-  //                       <div class="project-info-container-wrapper">
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">OVERVIEW</h1>
-  //                           <p>Krypto a crypto currency exchange platform build for use with the ethereum network. 
-  //                           </p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
-  //                           <p>
-  //                            <span class="bullet-point">-</span> Has been successfuly tested using chai and is hosted on the ropsten test blockchain.</p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                               <h1 style="font-size: 24px; ">TECH USED</h1>
-  //                           <div class="tech-used-container">
-  //                               <div class="tech-used-icon">REACT</div>
-  //                               <div class="tech-used-icon">Ethereum</div>
-  //                               <div class="tech-used-icon">METAMASK</div>
-  //                               <div class="tech-used-icon">Tailwind CSS</div>
-  //                           </div>
-  //                       </div>
-  //                       </div> 
-  //                   </div>
-  //               </div>
-  //           </div>
-  //           <div class="project-container">
-  //               <div class="project-container-header">
-  //                   <div>
-  //                   <h1 class="text-3xl">What The Doge NFT</h1>
-  //                   </div>
-  //                   <div>
-  //                       <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/115280045661947983841653635798987528830528599257518677970676727668494697496577" target="_blank" class="view-site-btn">Visit Site</a>
-  //                   </div>
-  //               </div>
-  //               <div class="project-container-inner">
-  //                   <div   class="project-image">
-  //                       <img class="website-image" src="{% static 'images/NFTGif.gif' %}"/>
-  //                   </div>
-  //                   <div class="project-info-container">
-  //                       <div class="project-info-container-wrapper">
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">OVERVIEW</h1>
-  //                           <p>A One of One NFT project to develop an NFT for the polygon blockchain. It was listed for sale on Opensea for .1 Eth.
-  //                           </p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
-  //                           <p>- Sucessfuly posted an NFT that was made from scratch in a marketplace. It has not sold yet.
-  //                           </p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                               <h1 style="font-size: 24px; ">TECH USED</h1>
-  //                           <div class="tech-used-container">
-  //                               <div class="tech-used-icon">Adobe After Effects</div>
-  //                               <div class="tech-used-icon">Blender</div>
-  //                               <div class="tech-used-icon">OpenSea</div>
-  //                               <div class="tech-used-icon">Polygon</div>
-  //                           </div>
-  //                       </div>
-  //                       </div> 
-  //                   </div>
-  //               </div>
-  //           </div>
-           
-            
-  //           <div class="project-container">
-  //               <div class="project-container-header">
-  //                   <div>
-  //                   <h1 class="text-3xl">UI DESIGN</h1>
-  //                   </div>
-  //                   <div>
-  //                       <a href="https://www.instagram.com/visionhow/" target="_blank" class="view-site-btn">See Designs</a>
-  //                   </div>
-  //               </div>
-  //               <div class="project-container-inner">
-  //                   <div   class="project-image">
-  //                       <img class="website-image" src="{% static 'images/visionhowUI.png' %}"/>
-  //                   </div>
-  //                   <div class="project-info-container">
-  //                       <div class="project-info-container-wrapper">
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">OVERVIEW</h1>
-  //                           <p>Visit Visionhow on Instagram to see UI Desgins.</p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
-  //                           <p>
-  //                            <span class="bullet-point">-</span>Have created several UI Designs and have started to gain a following.</p>
-  //                           <p>- My rolex UI Design was reposted by a more popular UI/UX Instagram page.</p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                               <h1 style="font-size: 24px; ">TECH USED</h1>
-  //                           <div class="tech-used-container">
-  //                               <div class="tech-used-icon">FIGMA</div>
-  //                               <div class="tech-used-icon">PHOTOSHOP</div>
-  //                               <div class="tech-used-icon">ILLUSTRATOR</div>
-  //                           </div>
-  //                       </div>
-  //                       </div> 
-  //                   </div>
-  //               </div>
-  //           </div>
-
-  //               <div class="project-container">
-  //                   <div class="project-container-header">
-  //                       <div>
-  //                       <h1 class="text-3xl">M-B HOMES REALTY</h1>
-  //                       </div>
-  //                       <div>
-  //                           <a href="https://www.m-bhomes.com" target="_blank" class="view-site-btn">Visit Site</a>
-  //                       </div>
-  //                   </div>
-  //                   <div class="project-container-inner">
-  //                       <div   class="project-image">
-  //                           <img class="website-image" src="{% static 'images/MBHOMESLAYOUT.png' %}"/>
-  //                       </div>
-  //                       <div class="project-info-container">
-  //                           <div class="project-info-container-wrapper">
-  //                               <div>
-  //                               <h1 style="font-size: 24px; ">OVERVIEW</h1>
-  //                               <p>Real Estate website for an agent that is currently in use.
-  //                                   Consists of multiple pages and live mls feed on homes currently 
-  //                                   for sale.
-  //                               </p>
-  //                               </div>
-  //                                   <br>
-  //                               <div>
-  //                               <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
-  //                               <p>
-  //                                <span class="bullet-point">-</span> Leads have come through the site in combination with social media advertising that have resulting in tens of thousands of dollars in commision.</p>
-  //                               <p>- Client stated statisfaction in the site and improved brand equity.</p>
-  //                               </div>
-  //                                   <br>
-  //                               <div>
-  //                                   <h1 style="font-size: 24px; ">TECH USED</h1>
-  //                               <div class="tech-used-container">
-  //                                   <div class="tech-used-icon">NEXTJS</div>
-  //                                   <div class="tech-used-icon">REACT</div>
-  //                                   <div class="tech-used-icon">SELENIUM</div>
-  //                                   <div class="tech-used-icon">DJANGO-RESTFRAMEWORK</div>
-  //                                   <div class="tech-used-icon">SCSS</div>
-  //                               </div>
-  //                           </div>
-  //                           </div> 
-  //                       </div>
-  //                   </div>
-  //               </div>
-            
-  //           <div class="project-container">
-  //               <div class="project-container-header">
-  //                   <div>
-  //                   <h1 class="text-3xl">Taskier App</h1>
-  //                   </div>
-  //                   <div>
-  //                       <a href="https://apps.apple.com/us/app/taskier/id1592401860" target="_blank" class="view-site-btn">Download</a>
-  //                   </div>
-  //               </div>
-  //               <div class="project-container-inner">
-  //                   <div   class="project-image">
-  //                       <img class="website-image" src="{% static 'images/TaskierAppLayout.png' %}"/>
-  //                   </div>
-  //                   <div class="project-info-container">
-  //                       <div class="project-info-container-wrapper">
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">OVERVIEW</h1>
-  //                           <p>Simple ToDo Application that is currently on the app store. It was completed to showcase 
-  //                               that I can create apps and push them into production as well as maintain them completing the full app 
-  //                               development lifecycle.
-  //                           </p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
-  //                           <p>
-  //                            <span class="bullet-point">-</span> Have a published app on the Apple App Store.</p>
-  //                           <p>- Showcased the app to friends and family recieving 10 downloads and 2 five star reviews to date currently.</p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                               <h1 style="font-size: 24px; ">TECH USED</h1>
-  //                           <div class="tech-used-container">
-  //                               <div class="tech-used-icon">REACT-NATIVE</div>
-  //                               <div class="tech-used-icon">EXPO</div>
-  //                               <div class="tech-used-icon">FIGMA</div>
-  //                               <div class="tech-used-icon">PHOTOSHOP</div>
-  //                           </div>
-  //                       </div>
-  //                       </div> 
-  //                   </div>
-  //               </div>
-  //           </div>
-  //           <div class="project-container">
-  //               <div class="project-container-header">
-  //                   <div>
-  //                   <h1 class="text-3xl">FIFTH ST HAIR</h1>
-  //                   </div>
-  //                   <div>
-  //                       <a href="https://5thstreethair.com" target="_blank" class="view-site-btn">Visit Site</a>
-  //                   </div>
-  //               </div>
-  //               <div class="project-container-inner">
-  //                   <div   class="project-image">
-  //                       <img class="website-image" src="{% static 'images/FifthStreetHair.png' %}"/>
-  //                   </div>
-  //                   <div class="project-info-container">
-  //                       <div class="project-info-container-wrapper">
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">OVERVIEW</h1>
-  //                           <p>A custom website for a new hair saloon incorperating booking. The site was launched during Covid and helped make the business 
-  //                               successful due to the booking feature allowing the hair saloon to still take customers.
-  //                           </p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
-  //                           <p>
-  //                            <span class="bullet-point">-</span>Website was launched with business genereating booking starting on first week.</p>
-  //                           <p>- Hundreds of haircuts have been booked through the site resulting in thousands of dollars of revenue and 
-  //                               improving efficency and customer satisfaction.
-  //                           </p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                               <h1 style="font-size: 24px; ">TECH USED</h1>
-  //                           <div class="tech-used-container">
-  //                               <div class="tech-used-icon">WORDPRESS</div>
-  //                               <div class="tech-used-icon">CSS</div>
-  //                               <div class="tech-used-icon">ELEMENTOR</div>
-  //                           </div>
-  //                       </div>
-  //                       </div> 
-  //                   </div>
-  //               </div>
-  //           </div>
-  //           <div onclick="toggleModel()" class="project-container">
-  //               <div class="project-container-header">
-  //                   <div>
-  //                   <h1 class="text-3xl">VisionHow App & Web Development</h1>
-  //                   </div>
-  //                   <div>
-  //                       <a href="https://www.visionhow.com" target="_blank" class="view-site-btn">Visit Site</a>
-  //                   </div>
-  //               </div>
-  //               <div class="project-container-inner">
-  //                   <div   class="project-image">
-  //                       <img class="website-image" src="{% static 'images/Visionhow.png' %}"/>
-  //                   </div>
-  //                   <div class="project-info-container">
-  //                       <div class="project-info-container-wrapper">
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">OVERVIEW</h1>
-  //                           <p>A small web design firm I manage and run. Visionhow has created 
-  //                               production project for several businesses. For my UI Design work look up Visionhow on Instagram.
-  //                           </p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
-  //                           <p>
-  //                            <span class="bullet-point">-</span> 
-  //                            Created a handfull of production websites for businesses with all positive customer reviews.</p>
-  //                           <p>- Helped businesses generate hundred of leads and thousands of dollars in conversions.</p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                               <h1 style="font-size: 24px; ">TECH USED</h1>
-  //                           <div class="tech-used-container">
-  //                               <div class="tech-used-icon">NEXTJS</div>
-  //                               <div class="tech-used-icon">SCSS</div>
-  //                               <div class="tech-used-icon">DJANGO-RESTFRAMEWORK</div>
-  //                               <div class="tech-used-icon">FIGMA</div>
-  //                               <div class="tech-used-icon">ILLUSTRATOR</div>
-  //                           </div>
-  //                       </div>
-  //                       </div> 
-  //                   </div>
-  //               </div>
-  //           </div>
-            
-  //           <div onclick="toggleModel" class="project-container">
-  //               <div class="project-container-header">
-  //                   <div>
-  //                   <h1 class="text-3xl">UI DESIGN</h1>
-  //                   </div>
-  //                   <div>
-  //                       <a href="https://www.instagram.com/visionhow/" target="_blank" class="view-site-btn">See Designs</a>
-  //                   </div>
-  //               </div>
-  //               <div class="project-container-inner">
-  //                   <div   class="project-image">
-  //                       <img class="website-image" src="{% static 'images/visionhowUI.png' %}"/>
-  //                   </div>
-  //                   <div class="project-info-container">
-  //                       <div class="project-info-container-wrapper">
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">OVERVIEW</h1>
-  //                           <p>Visit Visionhow on Instagram to see UI Desgins.</p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                           <h1 style="font-size: 24px; ">ACCOMPLISHMENTS</h1>
-  //                           <p>
-  //                            <span class="bullet-point">-</span>Have created several UI Designs and have started to gain a following.</p>
-  //                           <p>- My rolex UI Design was reposted by a more popular UI/UX Instagram page.</p>
-  //                           </div>
-  //                               <br>
-  //                           <div>
-  //                               <h1 style="font-size: 24px; ">TECH USED</h1>
-  //                           <div class="tech-used-container">
-  //                               <div class="tech-used-icon">FIGMA</div>
-  //                               <div class="tech-used-icon">PHOTOSHOP</div>
-  //                               <div class="tech-used-icon">ILLUSTRATOR</div>
-  //                           </div>
-  //                       </div>
-  //                       </div> 
-  //                   </div>
-  //               </div>
-  //           </div>
+ 
+    

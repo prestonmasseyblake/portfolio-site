@@ -20,7 +20,7 @@
         <div class="max-w-7xl">
         {% include "./components/navbar.html" %}
         
-        <div class="hero-container flex ">
+        <div class="hero-container flex flex-col  lg:flex-row">
             <div class="hero-container-text">
                 <h1 style="font-size: 48px;" class="name">PRESTON BLAKE</h1>
                 
@@ -36,25 +36,11 @@
                 <p>Regards,</p>
                 <img class="sig" src="{% static 'images/sigLogoo.png' %}" />
             </div>
-            {% comment %} <div class="hero-container-image">
+            <div class="hero-container-image">
                 <img class="hero-image" src="{% static 'images/HeroImage.svg' %}" />
-            </div> {% endcomment %}
+            </div> 
         </div>
-        {% comment %} <div id="slider">
-            <ul id="slideWrap"> 
-              <li>
-                <h1 class="quote-text">ITS NOT ABOUT HOW MANY TIMES YOU FALL. 
-                    ITS ABOUT HOW MANY TIMES YOU GET BACK UP.</h1>
-              </li>
-              <li>
-                <h1 class="quote-text">THERE IS A DIFFERENCE BETWEEN DOERS AND 
-                    DREAMERS AND THAT DIFFERENCE IS GETTING STUFF DONE.</h1>
-              </li>
-            </ul>
-            <div class="corner-left"></div>
-            <div class="corner-right"></div>
-       
-          </div> {% endcomment %}
+        
         
        
         
@@ -66,36 +52,7 @@
             </div>
         </div>
 
-        <div class="degrees-container">
-            
-            <div class="degree-row">
-                <div class="degree-image-container">
-                    <div class="coming-soon-container">
-                    <div class="coming-soon-banner">
-                        <h1 class="coming-soon">COMING SOON...</h1>
-                    </div>     
-                    </div>
-                </div>
-                <div class="degree-sentence">
-                    <h1>MS COMPUTER SCIENCE </h1>
-                    <h1>JAN 2021 - MAY 2023 </h1>
-                    <h1>FOCUS ON AI & DESIGN</h1>
-                </div>
-            </div>
-            <div class="degree-row">
-                <div class="degree-image-container">
-                    <div class="coming-soon-container">
-                        <img class="degree-paper" src="{% static 'images/degreeFinance.png' %}"/>
-                            
-                        </div>
-                </div>
-                <div class="degree-sentence">
-                    <h1>BUSINESS FINANCE </h1>
-                    <h1>AUG 2017 - MAY 2021 </h1>
-                    <h1>FOCUS ON REAL ESTATE </h1>
-                </div>
-            </div>
-        </div>
+        
 
        
         
@@ -219,7 +176,7 @@ var responsiveSlider = function() {
     };
     
     window.onload = function() {
-    responsiveSlider();  
+    //responsiveSlider();  
 
 
     // stuff for smooth scroll 
@@ -264,6 +221,7 @@ $('a[href*="#"]')
     
     
         </script>
+        <script src="{% static './js/search.js' %}"></script> 
     </div>
     </div>
     </body>

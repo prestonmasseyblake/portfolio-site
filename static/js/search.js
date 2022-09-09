@@ -91,11 +91,15 @@ const projects = [
 ];
 function initializeProjects(projs) {
   let projectsContainer = document.getElementById("projects-container");
+  while (projectsContainer.firstChild) {
+    projectsContainer.removeChild(projectsContainer.firstChild);
+  }
   console.log("gregeg", projectsContainer);
     projs.forEach((project) => {
       console.log(project)
         let projectCard = document.createElement("div");
-        projectCard.setAttribute("onclick", "toggleModel()");
+        projectCard.setAttribute("onclick", `toggleModelOpen(${project.id})`);
+      // projectCard.setAttribute("onclick", `toggleModel()`);
         projectCard.classList = "project-container"
         projectCard.style.backgroundColor = "#FFF"
         let projectHeaderContainer = document.createElement("div");
@@ -142,34 +146,52 @@ function initializeProjects(projs) {
       projectsContainer.append(projectCard);
   });
 }
-
+//initalize projects
 initializeProjects(projects);
+
+// search function for projects 
+function search(projs, value) {
+  let return_arr = [];
+  for (let i = 0; i < projs.length; i++) {
+    console.log(projs[i].title, ":", value)
+    if (projs[i].title.toLowerCase().includes(value.toLowerCase())) {
+      return_arr.push(projs[i])
+    }
+  }
+  console.log(return_arr.length)
+  initializeProjects(return_arr);
+}
 
 let searchInput = document.getElementById("search-input");
 searchInput.addEventListener("keyup", (e) => {
   console.log(e.target.value);
+  search(projects, e.target.value);
 });
 
-// search function for projects 
-function search(projs, value) {
-  for (let i = 0; i < projs.length; i++) {
-    if (projs[i].title === value) {
-      
-    }
+
+function toggleModelOpen(id) {
+  console.log(projects[id -1].title)
+  let toggleModel = document.getElementById("model-popup-container");
+  console.log(toggleModel.style.display);
+  let model = document.getElementById("model-popup");
+  if (toggleModel.style.display == "none") {
+    toggleModel.style.display = "flex";
+  }
+  else {
+    toggleModel.style.display = "none";
   }
 
 }
 
-// function toggleModel() {
-//   console.log("model toggle")
-//   let toggleModel = document.getElementById("model-popup-container");
-//   if (toggleModel.style.display == "none") {
-//     toggleModel.style.display = "block";
-//   }
-//   else {
-//     toggleModel.style.display = "none";
-//   }
-
-// }
+function toggleModelClose() {
+  let toggleModel = document.getElementById("model-popup-container");
+  console.log(toggleModel.style.display);
+  let model = document.getElementById("model-popup");
+  if (toggleModel.style.display == "none") {
+    toggleModel.style.display = "flex";
+  } else {
+    toggleModel.style.display = "none";
+  }
+}
  
     

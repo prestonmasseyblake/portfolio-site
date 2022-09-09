@@ -13,23 +13,52 @@
             
         </div>
         </div>
-      <div id="model-popup-container" class="modal-popup-container">
-        <div class="modal-popup max-w-7xl bg-[#FFF] h-full"> 
-            <div>
-            <p onclick="toggleModel()" id="close-modal" class="text-gray-500">X</p>
+      <div  id="model-popup-container" class="modal-popup-container">
+          <div onclick="toggleModel()" class="model-side">
+           
+          </div>
+        <div id="model-popup" class="modal-popup max-w-7xl flex flex-col  bg-[#FFF] h-full"> 
+        <div class="flex justify-between">
+            <div class="text-3xl text-gray-700 px-2 py-2">
+                <h1> 
+                M-B Homes
+                </h1>
+            </div>
+            <div onclick="toggleModelClose()" id="close-modal" class="w-16 h-16 cursor-pointer">
+                <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21 3.998c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-8.991 6.932 2.717-2.718c.146-.146.338-.219.53-.219.405 0 .751.325.751.75 0 .193-.073.384-.219.531l-2.718 2.717 2.728 2.728c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.384-.073-.531-.219l-2.728-2.728-2.728 2.728c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l2.728-2.728-2.722-2.722c-.146-.147-.219-.338-.219-.531 0-.425.346-.749.75-.749.192 0 .384.073.53.219z" fill-rule="nonzero"/></svg>
+            </div>
         </div>
-    </div>  
+            <div class="modal-popup-body">
+            <div class="modal-image-container">
+            <img class="modal-image w-full h-full" src={% static 'images/NFTGif.gif' %} />
+            </div>
+            <div class="p-4">
+                <h1 class="text-3xl text-black">Overview</h2>
+                    <p class="text-black">One of One NFT project to develop an NFT for the polygon blockchain. It was listed for sale on Opensea for .1 Eth.</p>
+                <h1 class="text-3xl text-black">Accomplishments</h2>
+                    <p class="text-black">One of One NFT project to develop an NFT for the polygon blockchain. It was listed for sale on Opensea for .1 Eth.</p>
+
+            </div>
+        </div>
+
+
+        </div>  
+       
+        <div onclick="toggleModel()" class="model-side">
+           
+        </div>
 </div>
 
 <script>
 function toggleModel() {
   console.log("model toggle")
   let toggleModel = document.getElementById("model-popup-container");
-  if (toggleModel.style.display == "none") {
-    toggleModel.style.display = "block";
+
+  if (toggleModel.style.visibility == "visible") {
+    toggleModel.style.visibility = "hidden";
   }
   else {
-    toggleModel.style.display = "none";
+    toggleModel.style.visibility = "visible";
   }
 
 }

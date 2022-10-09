@@ -11,6 +11,7 @@ const projects = [
     accomplishments:
       "Leads have come through the site in combination with social media advertising that have resulting in tens of thousands of dollars in commision. Client stated statisfaction in the site and improved brand equity.",
     tags: ["REACT", "NEXTJS", "SELENIUM", "DJANGO-RESTFRAMEWORK", "SCSS"],
+    summary: ""
   },
   {
     id: "2",
@@ -98,7 +99,7 @@ function initializeProjects(projs) {
     projs.forEach((project) => {
       console.log(project)
         let projectCard = document.createElement("div");
-        projectCard.setAttribute("onclick", `toggleModelOpen(${project.id})`);
+        // projectCard.setAttribute("onclick", `toggleModelOpen(${project.id})`);
       // projectCard.setAttribute("onclick", `toggleModel()`);
         projectCard.classList = "project-container"
         projectCard.style.backgroundColor = "#FFF"
@@ -130,19 +131,35 @@ function initializeProjects(projs) {
       projectCardInner.appendChild(projectCardImageContainer);
       projectCard.className = "project-container";
       let projectCardTechTitle = document.createElement("h1");
+      projectCardTechTitle.classList = "px-4"
       projectCardTechTitle.innerHTML = "Tech Used";
       projectCardTechTitle.style.color = "#000";
       projectCard.appendChild(projectCardTechTitle);
       // create the tags for the card 
       let projectCardTechUsedContainer = document.createElement("div");
-      projectCardTechUsedContainer.className = "tech-used-container";
+      projectCardTechUsedContainer.className = "tech-used-container px-4";
       for (let i = 0; i < project.tags.length; i++) {
         let projectCardTechUsedIcon = document.createElement("div");
         projectCardTechUsedIcon.className = "tech-used-icon";
         projectCardTechUsedIcon.innerHTML = project.tags[i];
         projectCardTechUsedContainer.appendChild(projectCardTechUsedIcon);
       }
-      projectCard.appendChild(projectCardTechUsedContainer);
+         projectCard.appendChild(projectCardTechUsedContainer);
+      let projectCardTechAbout = document.createElement("h1");
+      projectCardTechAbout.classList = "px-4";
+      projectCardTechAbout.innerHTML = "Summary";
+      projectCardTechAbout.style.color = "#000";
+      let projectCardTechSummary = document.createElement("p");
+      projectCardTechSummary.innerHTML = "This is a summary about a project";
+      projectCardTechSummary.style.color = "#000";
+      projectCardTechSummary.classList = "px-4 mb-4"
+      projectCard.appendChild(projectCardTechAbout);
+      projectCard.appendChild(projectCardTechSummary);
+
+
+   
+      
+      // create the drop down card part
       projectsContainer.append(projectCard);
   });
 }

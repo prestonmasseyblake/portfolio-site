@@ -15,9 +15,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </head>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <body>
-        <div class="main-container w-full flex justify-center">
-        <div class="max-w-7xl">
+    <body class="max-w-full">
+        <div class="main-container max-w-full flex justify-center">
+        <div class="max-w-full lg:max-w-7xl">
         {% include "./components/navbar.html" %}
         
         <div class="hero-container flex flex-col  lg:flex-row">
@@ -52,10 +52,12 @@
             </div>
         </div>
 
+        {% include "./components/degrees.html" %}
+
         
 
        
-        
+        {% include "./components/resumes.html"%}
         <div id="two" class="resume-container"> 
             <img class="resume-svg" src="{% static 'images/FullStackWeb3.png' %}" />
             <a href="{% static 'images/FullStackWeb3.pdf' %}" download class="download-resume-btn">

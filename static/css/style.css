@@ -122,11 +122,8 @@ body {
 }
 
 .degree-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 100%;
+  
+    
 }
 
 .hero-container-text {
@@ -138,15 +135,15 @@ body {
 }
 
 .degree-row {
-    margin: 40px 20px;
+   
 }
 
 .degrees-container {
-    padding: 20px;
+    
 }
 
 .degree-sentence {
-    margin: 0px 20px;
+    /* margin: 0px 20px; */
 }
 
 .hero-paragraph-text {

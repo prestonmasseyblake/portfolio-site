@@ -11,7 +11,8 @@ const projects = [
     accomplishments:
       "Leads have come through the site in combination with social media advertising that have resulting in tens of thousands of dollars in commision. Client stated statisfaction in the site and improved brand equity.",
     tags: ["REACT", "NEXTJS", "SELENIUM", "DJANGO-RESTFRAMEWORK", "SCSS"],
-    summary: ""
+    summary:
+      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
   },
   {
     id: "2",
@@ -23,6 +24,8 @@ const projects = [
     accomplishments:
       "I was the first person to use the platform becoming either the youngest or first person to get married on the polygon blockchain.",
     tags: ["REACT", "SOLIDITY", "POLYGON", "DJANGO-RESTFRAMEWORK"],
+    summary:
+      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
   },
   {
     id: "3",
@@ -34,6 +37,8 @@ const projects = [
     accomplishments:
       "Has been successfuly tested using chai and is hosted on the ropsten test blockchain.",
     tags: ["REACT", "Ethereum", "METAMASK", "Tailwind CSS", "WEB3"],
+    summary:
+      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
   },
   {
     id: "4",
@@ -45,6 +50,8 @@ const projects = [
     accomplishments:
       "Sucessfuly posted an NFT that was made from scratch in a marketplace. It has not sold yet.",
     tags: ["Adobe After Effects", "Blender", "OpenSea", "Polygon"],
+    summary:
+      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
   },
   {
     id: "5",
@@ -55,6 +62,8 @@ const projects = [
     accomplishments:
       "Have created several UI Designs and have started to gain a following. My rolex UI Design was reposted by a more popular UI/UX Instagram page.",
     tags: ["FIGMA", "Photoshop", "IlluSTRATOR"],
+    summary:
+      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
   },
   {
     id: "6",
@@ -66,6 +75,8 @@ const projects = [
     accomplishments:
       "Have a published app on the Apple App Store. Showcased the app to friends and family recieving 10 downloads and 2 five star reviews to date currently.",
     tags: ["REACT-NATIVE", "EXPO", "FIGMA", "PHOTOSHOP"],
+    summary:
+      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
   },
   {
     id: "7",
@@ -77,6 +88,8 @@ const projects = [
     accomplishments:
       "Website was launched with business genereating booking starting on first week. Hundreds of haircuts have been booked through the site resulting in thousands of dollars of revenue and improving efficency and customer satisfaction.",
     tags: ["WORDPRESS", "CSS", "ELEMENTOR", "PHOTOSHOP"],
+    summary:
+      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
   },
   {
     id: "8",
@@ -88,6 +101,8 @@ const projects = [
     accomplishments:
       "Created a handfull of production websites for businesses with all positive customer reviews. Helped businesses generate hundred of leads and thousands of dollars in conversions.",
     tags: ["NEXTJS", "SCSS", "DJANGO-RESTFRAMEWORK", "FIGMA"],
+    summary:
+      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
   },
 ];
 function initializeProjects(projs) {
@@ -150,7 +165,7 @@ function initializeProjects(projs) {
       projectCardTechAbout.innerHTML = "Summary";
       projectCardTechAbout.style.color = "#000";
       let projectCardTechSummary = document.createElement("p");
-      projectCardTechSummary.innerHTML = "This is a summary about a project";
+      projectCardTechSummary.innerHTML = project.summary;
       projectCardTechSummary.style.color = "#000";
       projectCardTechSummary.classList = "px-4 mb-4"
       projectCard.appendChild(projectCardTechAbout);

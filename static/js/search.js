@@ -16,6 +16,19 @@ const projects = [
   },
   {
     id: "2",
+    title: "ShoePal",
+    link: "http://shoepal.herokuapp.com",
+    image: "Shoepal.png",
+    overview:
+      "Real Estate website for an agent that is currently in use. Consists of multiple pages and live mls feed on homes currently for sale.",
+    accomplishments:
+      "Leads have come through the site in combination with social media advertising that have resulting in tens of thousands of dollars in commision. Client stated statisfaction in the site and improved brand equity.",
+    tags: ["REACT", "TAILWIND CSS", "SCSS"],
+    summary:
+      "React e-commerce application has dynamic inventory of Nike shoes. Single Page application using React and Tailwind CSS.",
+  },
+  {
+    id: "3",
     title: "Chain Marriage",
     link: "https://www.chainmarriage.com",
     image: "chainMarriageHome.png",
@@ -25,10 +38,10 @@ const projects = [
       "I was the first person to use the platform becoming either the youngest or first person to get married on the polygon blockchain.",
     tags: ["REACT", "SOLIDITY", "POLYGON", "DJANGO-RESTFRAMEWORK"],
     summary:
-      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
+      "Full stack blockchain web application. Proof of concept that marriage documents can be published to the blockchain and would be a more effective and efficient process than traditional marriage documents. Implements Solidity contracts that are interfacing with the Polygon blockchain. The contract are imbedded into the React frontend and on addition save data to the Django Rest Backend.",
   },
   {
-    id: "3",
+    id: "4",
     title: "Krypt | Exchange",
     link: "https://crpytoexchange.herokuapp.com",
     image: "KryptHome.png",
@@ -38,10 +51,10 @@ const projects = [
       "Has been successfuly tested using chai and is hosted on the ropsten test blockchain.",
     tags: ["REACT", "Ethereum", "METAMASK", "Tailwind CSS", "WEB3"],
     summary:
-      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
+      "React front-end application allows user to connect their Metamask wallets directly to the application. They then can then test toggling between currencies such as Etherium, Polygon, and USD coin. ",
   },
   {
-    id: "4",
+    id: "5",
     title: "What The Doge NFT",
     link: "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/115280045661947983841653635798987528830528599257518677970676727668494697496577",
     image: "NFTGif.gif",
@@ -50,11 +63,10 @@ const projects = [
     accomplishments:
       "Sucessfuly posted an NFT that was made from scratch in a marketplace. It has not sold yet.",
     tags: ["Adobe After Effects", "Blender", "OpenSea", "Polygon"],
-    summary:
-      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
+    summary: "",
   },
   {
-    id: "5",
+    id: "6",
     title: "UI DESIGN",
     link: "https://www.instagram.com/visionhow/",
     image: "visionhowUI.png",
@@ -63,10 +75,10 @@ const projects = [
       "Have created several UI Designs and have started to gain a following. My rolex UI Design was reposted by a more popular UI/UX Instagram page.",
     tags: ["FIGMA", "Photoshop", "IlluSTRATOR"],
     summary:
-      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
+      "An assortment of my UI design work can be found @visionhow on instagram. Most of the UI’s were built using Figma, Photoshop and Illustrator.",
   },
   {
-    id: "6",
+    id: "7",
     title: "Taskier App",
     link: "https://apps.apple.com/us/app/taskier/id1592401860",
     image: "TaskierApp.png",
@@ -76,10 +88,10 @@ const projects = [
       "Have a published app on the Apple App Store. Showcased the app to friends and family recieving 10 downloads and 2 five star reviews to date currently.",
     tags: ["REACT-NATIVE", "EXPO", "FIGMA", "PHOTOSHOP"],
     summary:
-      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
+      "Basic React Native Application using a built in SQLLite Database. Uses Material UI and custom components. Hosted for download on the Apple App Store.",
   },
   {
-    id: "7",
+    id: "8",
     title: "FIFTH ST HAIR",
     link: "https://5thstreethair.com",
     image: "FifthStreetHair.png",
@@ -89,10 +101,10 @@ const projects = [
       "Website was launched with business genereating booking starting on first week. Hundreds of haircuts have been booked through the site resulting in thousands of dollars of revenue and improving efficency and customer satisfaction.",
     tags: ["WORDPRESS", "CSS", "ELEMENTOR", "PHOTOSHOP"],
     summary:
-      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
+      "A wordpress site built using custom css and UI Design. Uses Woocommerce booking with custom scripts. Has been used by over 500+ customers to book hair appointments.",
   },
   {
-    id: "8",
+    id: "9",
     title: "VisionHow App & Web Development",
     link: "https://www.visionhow.com",
     image: "Visionhow.png",
@@ -102,7 +114,7 @@ const projects = [
       "Created a handfull of production websites for businesses with all positive customer reviews. Helped businesses generate hundred of leads and thousands of dollars in conversions.",
     tags: ["NEXTJS", "SCSS", "DJANGO-RESTFRAMEWORK", "FIGMA"],
     summary:
-      "Full Stack Real Estate Application. Django Rest backend with Postgres and Nextjs frontend with SSR. Scrapes real time real estate data (BS4 & Selenium). Generated 68% more leads and several conversions. Visit m-bhomes.com.",
+      "Full stack web application. Is using Next.js for server side rendering and improved SEO capabilities. Is using STMP server for automating emails and responses to potential clients.",
   },
 ];
 function initializeProjects(projs) {
@@ -132,7 +144,10 @@ function initializeProjects(projs) {
         projectHeaderContainer.appendChild(projectHeaderContainerButton);
         let projectHeaderButton = document.createElement("a");
         projectHeaderButton.classList = "view-site-btn";
-        projectHeaderButton.innerHTML = "Visit Site";
+      projectHeaderButton.innerHTML = "Visit Site";
+      projectHeaderButton.setAttribute("href", project.link);
+      projectHeaderButton.setAttribute("target", "_blank");
+      
       projectHeaderContainerButton.appendChild(projectHeaderButton);
       let projectCardInner = document.createElement("div");
       projectCardInner.classList = "project-container-inner";
